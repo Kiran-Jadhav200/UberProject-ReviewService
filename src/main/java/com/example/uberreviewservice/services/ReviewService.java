@@ -31,7 +31,8 @@ public class ReviewService implements CommandLineRunner {
                 .rating(4.2)
                 .build();
         System.out.println("****************//// new /////////////***********\n" + g);
-        reviewRepository.save(g);
+        reviewRepository.save(g); //this code execute sql query
+        System.out.println("Id is " + r.getId());
 
         List<Review> reviews = reviewRepository.findAll();
 
